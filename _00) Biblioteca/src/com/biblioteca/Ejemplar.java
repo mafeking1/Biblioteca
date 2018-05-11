@@ -4,8 +4,6 @@ import com.biblioteca.Publicacion.Publicacion;
 
 public class Ejemplar {
 
-    /* comentario */
-
     private Publicacion publicacion;
     private Integer numeroEdicion;
     private Integer numeroIdentificacion;

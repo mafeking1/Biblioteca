@@ -7,35 +7,13 @@ import java.util.List;
 
 public class Paper extends Publicacion {
 
-    private String titulo;
-    private String autores;
     private Date fechaPublicacion;
     private String resumen;
-    private List<Ejemplar> listaEjemplaresParaPrestar;
 
-    public Paper(String titulo, Long codigoIsbn, String autores, Date fechaPublicacion, String resumen, List<Ejemplar> listaEjemplaresParaPrestar) {
-        this.titulo = titulo;
-        super.setCodigoIsbn(codigoIsbn);
-        this.autores = autores;
+    public Paper(String nombre, Long codigoIsbn, String autor, Date fechaPublicacion, String resumen) {
+        super(nombre, codigoIsbn, autor);
         this.fechaPublicacion = fechaPublicacion;
         this.resumen = resumen;
-        this.listaEjemplaresParaPrestar = listaEjemplaresParaPrestar;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getAutores() {
-        return autores;
-    }
-
-    public void setAutores(String autores) {
-        this.autores = autores;
     }
 
     public Date getFechaPublicacion() {
@@ -52,13 +30,5 @@ public class Paper extends Publicacion {
 
     public void setResumen(String resumen) {
         this.resumen = resumen;
-    }
-
-    public List<Ejemplar> getListaEjemplaresParaPrestar() {
-        return listaEjemplaresParaPrestar;
-    }
-
-    public void setListaEjemplaresParaPrestar(List<Ejemplar> listaEjemplaresParaPrestar) {
-        this.listaEjemplaresParaPrestar = listaEjemplaresParaPrestar;
     }
 }
