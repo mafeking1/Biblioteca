@@ -1,9 +1,6 @@
-package com.biblioteca.Publicacion;
-
-import com.biblioteca.Ejemplar;
+package com.biblioteca.Publicaciones;
 
 import java.util.Date;
-import java.util.List;
 
 public class Revista extends Publicacion {
 

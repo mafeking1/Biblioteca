@@ -1,8 +1,6 @@
-package com.biblioteca.Publicacion;
+package com.biblioteca.Publicaciones;
 
 import com.biblioteca.Ejemplar;
-
-import java.util.List;
 
 public class Libro extends Publicacion implements Imprimible {
 

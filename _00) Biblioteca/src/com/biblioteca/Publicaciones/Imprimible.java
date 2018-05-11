@@ -1,4 +1,4 @@
-package com.biblioteca.Publicacion;
+package com.biblioteca.Publicaciones;
 
 import com.biblioteca.Ejemplar;
 

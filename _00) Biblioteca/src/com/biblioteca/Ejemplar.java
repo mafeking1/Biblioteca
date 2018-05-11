@@ -1,6 +1,6 @@
 package com.biblioteca;
 
-import com.biblioteca.Publicacion.Publicacion;
+import com.biblioteca.Publicaciones.Publicacion;
 
 public class Ejemplar {
 

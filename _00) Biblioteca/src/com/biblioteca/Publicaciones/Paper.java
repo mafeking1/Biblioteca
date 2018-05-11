@@ -1,9 +1,8 @@
-package com.biblioteca.Publicacion;
+package com.biblioteca.Publicaciones;
 
 import com.biblioteca.Ejemplar;
 
 import java.util.Date;
-import java.util.List;
 
 public class Paper extends Publicacion implements Imprimible{
 
