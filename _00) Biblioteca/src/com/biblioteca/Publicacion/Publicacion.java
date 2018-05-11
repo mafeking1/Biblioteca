@@ -63,5 +63,15 @@ public abstract class Publicacion {
         listaEjemplaresParaPrestar.add(ejemplar);
     }
 
+    public Ejemplar prestarEjemplar(){
+        for (Ejemplar ejemplar : listaEjemplaresParaPrestar){
+            if(ejemplar.getPrestado() == false){
+                ejemplar.setPrestado(true);
+                return ejemplar;
+            }
+        }
+        return null;
+    }
+
 
 }

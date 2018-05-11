@@ -6,14 +6,16 @@ public class Ejemplar {
 
     private Publicacion publicacion;
     private Integer numeroEdicion;
-    private Integer numeroIdentificacion;
+    private String numeroIdentificacion;
     private String comentario;
+    private Boolean prestado;
 
-    public Ejemplar(Publicacion publicacion, Integer numeroEdicion, Integer numeroIdentificacion, String comentario) {
+    public Ejemplar(Publicacion publicacion, Integer numeroEdicion, String numeroIdentificacion, String comentario, Boolean prestado) {
         this.publicacion = publicacion;
         this.numeroEdicion = numeroEdicion;
         this.numeroIdentificacion = numeroIdentificacion;
         this.comentario = comentario;
+        this.prestado = prestado;
     }
 
     public Publicacion getPublicacion() {
@@ -32,11 +34,11 @@ public class Ejemplar {
         this.numeroEdicion = numeroEdicion;
     }
 
-    public Integer getNumeroIdentificacion() {
+    public String getNumeroIdentificacion() {
         return numeroIdentificacion;
     }
 
-    public void setNumeroIdentificacion(Integer numeroIdentificacion) {
+    public void setNumeroIdentificacion(String numeroIdentificacion) {
         this.numeroIdentificacion = numeroIdentificacion;
     }
 
@@ -46,5 +48,13 @@ public class Ejemplar {
 
     public void setComentario(String comentario) {
         this.comentario = comentario;
+    }
+
+    public Boolean getPrestado() {
+        return prestado;
+    }
+
+    public void setPrestado(Boolean prestado) {
+        this.prestado = prestado;
     }
 }
