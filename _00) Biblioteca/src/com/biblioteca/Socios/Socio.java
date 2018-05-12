@@ -7,16 +7,28 @@ import java.util.List;
 
 public class Socio {
 
+    private String numero;
     private String nombre;
     private String apellido;
     private String direccion;
     private List<Ejemplar> listaEjemplaresRetirados;
+    private Integer limiteEjemplaresRetirados;
 
-    public Socio(String nombre, String apellido, String direccion) {
+    public Socio(String numero, String nombre, String apellido, String direccion) {
+        this.numero = numero;
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
         this.listaEjemplaresRetirados = new ArrayList<>();
+        this.limiteEjemplaresRetirados = 3;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 
     public String getNombre() {
@@ -49,5 +61,13 @@ public class Socio {
 
     public void setListaEjemplaresRetirados(List<Ejemplar> listaEjemplaresRetirados) {
         this.listaEjemplaresRetirados = listaEjemplaresRetirados;
+    }
+
+    public Integer getLimiteEjemplaresRetirados() {
+        return limiteEjemplaresRetirados;
+    }
+
+    public void setLimiteEjemplaresRetirados(Integer limiteEjemplaresRetirados) {
+        this.limiteEjemplaresRetirados = limiteEjemplaresRetirados;
     }
 }
