@@ -53,7 +53,12 @@ public abstract class Publicacion {
 
     public boolean tieneEjemplaresDisponibles(){
         if (listaEjemplaresParaPrestar.size() > 0){
-            return true;
+            for (Ejemplar ejemplar : listaEjemplaresParaPrestar) {
+                if(ejemplar.getPrestado() == false){
+                    return true;
+                }
+            }
+            return false;
         }else{
             return false;
         }

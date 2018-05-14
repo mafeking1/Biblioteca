@@ -7,15 +7,15 @@ import java.util.List;
 
 public class Socio {
 
-    private String numero;
+    private Integer numeroSocio;
     private String nombre;
     private String apellido;
     private String direccion;
     private List<Ejemplar> listaEjemplaresRetirados;
     private Integer limiteEjemplaresRetirados;
 
-    public Socio(String numero, String nombre, String apellido, String direccion) {
-        this.numero = numero;
+    public Socio(Integer numeroSocio, String nombre, String apellido, String direccion) {
+        this.numeroSocio = numeroSocio;
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
@@ -23,12 +23,12 @@ public class Socio {
         this.limiteEjemplaresRetirados = 3;
     }
 
-    public String getNumero() {
-        return numero;
+    public Integer getNumeroSocio() {
+        return numeroSocio;
     }
 
-    public void setNumero(String numero) {
-        this.numero = numero;
+    public void setNumeroSocio(Integer numeroSocio) {
+        this.numeroSocio = numeroSocio;
     }
 
     public String getNombre() {
@@ -69,5 +69,23 @@ public class Socio {
 
     public void setLimiteEjemplaresRetirados(Integer limiteEjemplaresRetirados) {
         this.limiteEjemplaresRetirados = limiteEjemplaresRetirados;
+    }
+
+    public boolean puedeSolicitarPrestamo(){
+        if(listaEjemplaresRetirados.size() > limiteEjemplaresRetirados) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public void agregarEjemplar(Ejemplar ejemplar){
+        ejemplar.setPrestado(true);
+        listaEjemplaresRetirados.add(ejemplar);
+    }
+
+    public void removerEjemplar(Ejemplar ejemplar){
+        ejemplar.setPrestado(false);
+        listaEjemplaresRetirados.remove(ejemplar);
     }
 }
