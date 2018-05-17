@@ -70,10 +70,8 @@ public abstract class Publicacion {
 
     public Ejemplar prestarEjemplar(){
         for (Ejemplar ejemplar : listaEjemplaresParaPrestar){
-            if(ejemplar.getPrestado() == false){
-                ejemplar.setPrestado(true);
-                return ejemplar;
-            }
+            listaEjemplaresParaPrestar.remove(ejemplar);
+            return ejemplar;
         }
         return null;
     }

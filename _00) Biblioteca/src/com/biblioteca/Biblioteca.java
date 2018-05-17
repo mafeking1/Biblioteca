@@ -56,12 +56,31 @@ public class Biblioteca {
                     for (Socio socio : listaSocios) {
                         if (socio.getNumeroSocio() == numeroSocio){
                             if (socio.puedeSolicitarPrestamo() == true){
-
+                                Ejemplar ejemplar = publicacion.prestarEjemplar();
+                                socio.agregarEjemplar(ejemplar);
+                            }else{
+                                System.out.println("El socio " + numeroSocio + " no puede solicitar nuevos libros prestados.");
                             }
                         }
                     }
+                }else{
+                    System.out.println("El publicación " + publicacion.getNombre() + " no tiene ejemplares disponible.");
                 }
             }
         }
+    }
+
+    public void devolucionEjemplar(Ejemplar ejemplar, Integer numeroSocio){
+        for (Socio socio : listaSocios){
+            if (socio.getNumeroSocio() == numeroSocio){
+                socio.removerEjemplar(ejemplar);
+                Publicacion publicacion = ejemplar.getPublicacion();
+                publicacion.agregarEjemplar(ejemplar);
+            }
+        }
+    }
+
+    public void prestamoMultiplesEjemplares(List<Ejemplar> listaEjemplares, Integer numeroSocio){
+
     }
 }
